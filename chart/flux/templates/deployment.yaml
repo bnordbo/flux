@@ -62,6 +62,9 @@ spec:
       - name: docker-credentials
         secret:
           secretName: "{{ .Values.registry.dockercfg.secretName }}"
+          items:
+            - key: .dockerconfigjson
+              path: config.json
       {{- end }}
       {{- if .Values.gpgKeys.secretName }}
       - name: gpg-keys
