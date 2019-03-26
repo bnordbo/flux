@@ -155,6 +155,7 @@ registry:
     hostPath: /etc/kubernetes/azure.json
   dockercfg:
     enabled: false
+    path: "/dockercfg/config.json"
     secretName: ""
 memcached:
   repository: memcached
